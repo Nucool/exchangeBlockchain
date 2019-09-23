@@ -1,0 +1,9 @@
+{
+  "name": "clmcoin",
+  "version": "1.0.0",
+  "main": "truffle.js",
+  "license": "MIT",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.3.0"
+  }
+}

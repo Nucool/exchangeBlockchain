@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+.AppLoading {
+  align-items: center;
+  min-height: 100vh;
+  position: fixed;
+  width:100%;
+  left:0;right:0;top:0;bottom:0;
+  z-index: 9999;
+  opacity: 0.7;
+}
+
+.AppLoadingIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #C0C0C0;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+
+.AppBody {
+  background-color: #D5DBDB;
+	height: 100%;
+  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.box {
+  text-align: center;
+  color: white;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.App-header {
+  background-color: #F2F4F4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+
+body .App {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
