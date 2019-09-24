@@ -11022,10 +11022,16 @@
       },
       "address": "0x4269C1dE6Ed7610f47c3Fb582E12ee79171816A1",
       "transactionHash": "0x161d4ad99dfec1256f551286eb855aae6aa75ac70e0cd18379268d12173f8aa3"
+    },
+    "1569316481279": {
+      "events": {},
+      "links": {},
+      "address": "0xA64204b5fbD931bC8F0EBc0c1d91b341529f1432",
+      "transactionHash": "0xf7988b88db7253bb33f5c840ab1df270a350ff2e47933b5065ae967512feeee4"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-09-22T13:36:10.974Z",
+  "updatedAt": "2019-09-24T09:24:36.511Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {
