@@ -10,6 +10,8 @@ import Public from "./pages/Public";
 import MainPage from "./pages/MainPage";
 import ExchangeTokenPage from "./pages/ExchangeTokenPage";
 import SearchCarCrashPage from "./pages/SearchCarCrashPage";
+import TaskBikePage from "./pages/TaskBikePage";
+import ComingSoonPage from "./pages/ComingSoonPage";
 
 const Routes = props => (
   <Router>
@@ -26,6 +28,18 @@ const Routes = props => (
           exact
           path="/SearchCarCrash"
           component={SearchCarCrashPage}
+          {...props}
+        />
+        <Public
+          exact
+          path="/TaskBike"
+          component={TaskBikePage}
+          {...props}
+        />{" "}
+        <Public
+          exact
+          path="/ComingSoon"
+          component={ComingSoonPage}
           {...props}
         />
       </Switch>
@@ -48,6 +62,7 @@ class App extends React.Component {
     this.handleLoading = this.handleLoading.bind(this);
     this.handleBuyClaimDiToken = this.handleBuyClaimDiToken.bind(this);
     this.handleGetAccidentHistory = this.handleGetAccidentHistory.bind(this);
+    this.handleAddAccidentHistory = this.handleAddAccidentHistory.bind(this);
   }
 
   async initState(drizzleState) {
@@ -136,7 +151,26 @@ class App extends React.Component {
       }
       accident = await Promise.all(promises);
     }
+    this.handleLoading(false);
     return accident;
+  }
+
+  async handleAddAccidentHistory(task) {
+    console.log("handleAddAccidentHistory task", task);
+    this.claimDiCoin
+      .addAccidentHistory(
+        task.carRegis,
+        task.carChassic,
+        task.accidentDetail,
+        task.accidentDate,
+        task.accidentPlace,
+        task.policyNumber,
+        task.policyClaimNumber
+      )
+      .then(res => {
+        this.handleLoading(false);
+        console.log(res);
+      });
   }
 
   render() {
@@ -161,6 +195,7 @@ class App extends React.Component {
           handleTotalCDT={this.handleTotalCDT}
           handleBuyClaimDiToken={this.handleBuyClaimDiToken}
           handleGetAccidentHistory={this.handleGetAccidentHistory}
+          handleAddAccidentHistory={this.handleAddAccidentHistory}
         />
       </div>
     );

@@ -18,7 +18,7 @@ const Loading = props => {
 };
 
 function formatNumber(num) {
-  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 }
 
 const Public = ({ component, ...rest }) => (
@@ -50,8 +50,11 @@ const Public = ({ component, ...rest }) => (
                     <img src="/images/coin.png" width="90" />
                   </Link>
                 </div>
-                <div style={{ flex: 8, fontSize: "1.4em" }}>
-                  You have <b>{formatNumber(rest.totalCDT)}</b> CLM
+                <div style={{ flex: 8 }}>
+                  <div style={{ fontSize: "1.4em" }}>
+                    You have <b>{formatNumber(rest.totalCDT)}</b> CLM
+                  </div>
+                  <div style={{marginTop: '10px'}}>(1 CLM = 0.01 ETH)</div>
                 </div>
               </div>
             </div>

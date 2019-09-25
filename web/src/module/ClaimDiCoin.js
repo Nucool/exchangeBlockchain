@@ -5,7 +5,7 @@ const ClaimDiCoin = contract => {
     },
     buyToken: (amount, address) => {
       return contract.methods.buyToken(amount).send({
-        value: contract.web3.utils.toWei(amount.toString(), "ether"),
+        value: amount * 10000000000000000,
         from: address,
         gas: 3000000
       });
@@ -22,7 +22,7 @@ const ClaimDiCoin = contract => {
         .send({ gas: 3000000 });
     },
     getAccidentHistoryById: id => {
-        return contract.methods.getAccidentHistoryById(id).call();
+      return contract.methods.getAccidentHistoryById(id).call();
     },
     addAccidentHistory: (
       carRegis,

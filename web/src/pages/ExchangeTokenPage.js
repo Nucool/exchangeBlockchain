@@ -21,7 +21,10 @@ class ExchangeTokenPage extends React.Component {
   handleTotalExchange = event => {
     this.setState({
       totalExchange: event.target.value,
-      totalETH: event.target.value,
+      totalETH:
+        event.target.value !== ""
+          ? parseInt(event.target.value) * 0.01
+          : "",
       readyToExchange: event.target.value > 0
     });
   };

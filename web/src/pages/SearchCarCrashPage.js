@@ -47,19 +47,20 @@ const CarAccidentItem = item => {
 
 class SearchCarCrashPage extends React.Component {
   state = {
-    searchValue: "carRegis",
-    accidentDetail: [
-      {
-        id: 1,
-        carRegis: "carRegis",
-        carChassic: "carRegis",
-        accidentDetail: "carRegis",
-        accidentDate: "carRegis",
-        accidentPlace: "carRegis",
-        policyNumber: "carRegis",
-        policyClaimNumer: "carRegis"
-      }
-    ]
+    searchValue: "",
+    accidentDetail: []
+    // accidentDetail: [
+    //   {
+    //     id: 1,
+    //     carRegis: "carRegis",
+    //     carChassic: "carRegis",
+    //     accidentDetail: "carRegis",
+    //     accidentDate: "carRegis",
+    //     accidentPlace: "carRegis",
+    //     policyNumber: "carRegis",
+    //     policyClaimNumer: "carRegis"
+    //   }
+    // ]
   };
 
   constructor(props) {

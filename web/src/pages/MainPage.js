@@ -64,7 +64,7 @@ class MainPage extends React.Component {
           </Link>
         </div>
         <div className="menu">
-          <Link to="/SearchCarCrash">
+          <Link to="/ComingSoon">
             <div
               style={{
                 width: "100%",
@@ -93,7 +93,7 @@ class MainPage extends React.Component {
           </Link>
         </div>
         <div className="menu">
-          <Link to="/SearchCarCrash">
+          <Link to="/TaskBike">
             <div
               style={{
                 width: "100%",

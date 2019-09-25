@@ -14,7 +14,7 @@ contract ClaimDiCoin is ERC20, Ownable {
     string public symbol = "CLM";
     uint8 public decimals;
     uint public INITIAL_SUPPLY = 10000000;
-    uint256 internalPrice = 1 ether;
+    uint256 internalPrice = 0.01 ether;
     uint256 private _reservePay;
     address payable private _ownerPay;
 
