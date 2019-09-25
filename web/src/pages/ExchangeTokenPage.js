@@ -62,7 +62,7 @@ class ExchangeTokenPage extends React.Component {
                       value={this.state.totalExchange}
                       onChange={this.handleTotalExchange}
                     />
-                    <span className="input-group-addon">CDT</span>
+                    <span className="input-group-addon">CLM</span>
                   </div>
                 </div>
                 <div
